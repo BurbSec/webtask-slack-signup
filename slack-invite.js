@@ -245,11 +245,6 @@ function invite_sent() {/*
             <h2>Invite to <strong><%= ctx.secrets.SLACK_ORG %></strong> is on its way!</h2>
             <p><small>Check for e-mail from feedback@slack.com</small></p>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">your own Slack invite</a></p>
-            </div>
-        </div>
     </div>
 </body>
 </html>
@@ -268,11 +263,6 @@ function oops() {/*
             <img src="<%- ctx.secrets.LOGO_URL || logo_url %>" width="100" heigth="100">
             <h2>Something is not quite right...</h2>
             <p><%= error.message %></p>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">your own Slack invite</a></p>
-            </div>
         </div>
     </div>
 </body>
