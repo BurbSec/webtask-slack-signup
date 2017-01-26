@@ -98,11 +98,6 @@ function slack_invite() {/*
         .header-image .image{
             background: transparent url("<%- ctx.secrets.BG_URL || ctx.secrets.LOGO_URL || logo_url %>") center center no-repeat;
             background-size: cover;
-            -webkit-filter: blur(12px);
-            -moz-filter: blur(12px);
-            -o-filter: blur(12px);
-            -ms-filter: blur(12px);
-            filter: blur(12px);
             position: absolute;
             top: -20px;
             right: -20px;
