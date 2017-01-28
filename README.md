@@ -17,6 +17,6 @@ wt create https://raw.githubusercontent.com/BurbSec/webtask-slack-signup/master/
     --parse-body
 ```
 
-The `{your_slack_admin_token}` can be obtained from Slack [here](https://api.slack.com/docs/oauth-test-tokens). 
+The `{your_slack_admin_token}` can be obtained from Slack [here](https://api.slack.com/docs/oauth-test-tokens). Currently this only works with TEST tokens; unsure why. Possibly either because prod tokens require an associated Client_ID to be passed, or a registered redirect URL (see above likn for info). Feel free to figure it out!
 
 You can add any other variables you want to the js file, and just pass values to them using --secret, as above.
