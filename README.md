@@ -1,25 +1,22 @@
-Create Slack signup page using Auth0 webtasks
-======
+By: @J0hnnyXm4s
 
-![image](https://cloud.githubusercontent.com/assets/3391028/20866792/4f930b42-ba14-11e6-94fc-18b1c7578137.png)
+Create Slack signup page using Auth0 webtasks to generate a js file which will cause a full signup page to be rendered in a user's browser without requiring hosting.
 
-
-With [Auth0 Webtasks](https://webtask.io) you can quickly create a signup page for your Slack team without worrying about hosting, backends, and devops. 
-
-Follow these 3 steps:
+Follow these 3 steps to install the webtasks.io cli and create a webtask URL to pass around:
 
 ```bash
 npm install -g wt-cli
 wt init
-wt create https://raw.githubusercontent.com/auth0/webtask-slack-signup/master/slack-invite.js \
+wt create https://raw.githubusercontent.com/BurbSec/webtask-slack-signup/master/slack-invite.js \
     --name {your_slack_team}-signup \
     --capture \
     --secret SLACK_ORG={your_slack_team} \
-    --secret SLACK_TOKEN={your_slack_admin_token}
+    --secret SLACK_TOKEN={your_slack_admin_token} \
+    --secret BG_URL={url_for_header_image} \ 
+    --secret LOGO_URL={url_for_logo_image} \
+    --parse-body
 ```
 
 The `{your_slack_admin_token}` can be obtained from Slack [here](https://api.slack.com/docs/oauth-test-tokens). 
 
-Optionally, you can also provide `--secret LOGO_URL={url_to_your_logo}` which will display your custom logo on the signup page. It should be square and not less than 100x100px. 
-
-Use the resulting URL as your Slack signup page. Enjoy!
+You can add any other variables you want to the js file, and just pass values to them using --secret, as above.
